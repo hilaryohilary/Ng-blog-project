@@ -1,0 +1,32 @@
+.card{
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.card-body{
+  display: flex;
+  padding: 15px;
+  align-items: center;
+}
+
+h3 {
+  font-size:30px;
+}
+
+img {
+  max-height: 200px;
+}
+
+.continue-reading {
+  font-style: italic;
+  color: #e5e5e5;
+  position: relative;
+  top: 10px;
+  transition: all .5s;
+}
+
+.continue-reading:hover {
+color: rgb(230, 230, 20);
+}
