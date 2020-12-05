@@ -25,16 +25,17 @@ import { SharedService } from './shared.service';
       NotFoundComponent
    ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     RouterModule.forRoot([
-       { path: 'articles', component: ArticleListComponent },
-       { path: 'about', component: AboutComponent },
-       { path: '404', component: NotFoundComponent},
-       { path: '', component: ArticleListComponent },
-       { path: ':key', component: ArticleComponent },
-       { path: '**', component: NotFoundComponent }
-
-     ])
+    { path: 'articles', component: ArticleListComponent },
+    { path: 'about', component: AboutComponent },
+    { path: '404', component: NotFoundComponent },
+    { path: '', component: ArticleListComponent },
+    { path: ':key', component: ArticleComponent },
+    { path: '**', component: NotFoundComponent }
+], {
+    initialNavigation: 'enabled'
+})
 
   ],
   providers: [ArticleService, SharedService],
