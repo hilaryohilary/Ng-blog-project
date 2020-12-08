@@ -11,6 +11,7 @@ import { ArticleService } from './article.service';
 import { ArticleComponent } from './article/article.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SharedService } from './shared.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -26,6 +27,7 @@ import { SharedService } from './shared.service';
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    HttpClientModule,
     RouterModule.forRoot([
     { path: 'articles', component: ArticleListComponent },
     { path: 'about', component: AboutComponent },
